@@ -6,6 +6,7 @@ import { Button } from "components/Button/Button";
 import css from "./StatusFilter.module.css";
 
 export const StatusFilter = () => {
+  
   const filter = useSelector(getStatusFilter);
 
   return (

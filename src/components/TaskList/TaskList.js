@@ -9,7 +9,8 @@ const getVisibleTasks = (tasks, statusFilter) => {
       return tasks.filter(task => !task.completed);
 
     case statusFilters.completed:
-      return tasks.filter(task => task.active);
+      return tasks.filter(task => task.completed);
+      
 
     default:
       return tasks;

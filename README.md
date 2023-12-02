@@ -9,7 +9,7 @@ createSlice accepts an object of reducer functions, so I did not use
 createReducer function in this app. To update the state I wrote
 "mutable" code, this is because createSlice uses Immer under the hood. 
 createSlice allows to keep the code related to a "slice" in respective seperate 
- files in such a way incapsulating the logic. Also this approach helps 
+ file in such a way incapsulating the logic. Also this approach helps 
  with redability and maintainability of the code. 
 
 

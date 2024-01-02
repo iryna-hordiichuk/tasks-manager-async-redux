@@ -1,16 +1,7 @@
-# task-manager-redux-toolkit
+#tasks-manager-async-redux
 
-An app to help to manage tasks: it adds, deletes and filters tasks, 
-displays active and completed status. 
+Welcome to the tasks-manager-async-redux repository!
+ This project is a task manager application: it adds, deletes and filters tasks, displays active and completed status.
 
-🌲To create this task manager I used 🌳Redux toolkit library, 
-namely configureStore and createSlice functions. 
-createSlice accepts an object of reducer functions, so I did not use 
-createReducer function in this app.
- 🌲To update the state I wrote "mutable" code, this is because createSlice uses Immer under the hood. 
-🌲createSlice allows to keep the code related to a "slice" in respective seperate 
- file in such a way incapsulating the logic. Also this approach helps 
- with redability and maintainability of the code. 
-
-
+ The project is built using React, Redux Toolkit, and asynchronous operations with createAsyncThunk. The backend is simulated using mockapi.io, data fetching is performed using Axios. 
 

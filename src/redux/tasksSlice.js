@@ -1,17 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { nanoid } from 'nanoid';
-
-const tasksInitialState = [
-  { id: 0, text: "Learn HTML and CSS", completed: true },
-  { id: 1, text: "Get good at JavaScript", completed: true },
-  { id: 2, text: "Master React", completed: false },
-  { id: 3, text: "Discover Redux", completed: false },
-  { id: 4, text: "Build amazing apps", completed: false },
-];
+import { fetchTasks} from './operations';
 
 const tasksSlice = createSlice({
   name: 'tasks',
-  initialState: tasksInitialState,
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+  },
   reducers: {
     addTask: {
       reducer(state, action) {
@@ -40,6 +36,21 @@ const tasksSlice = createSlice({
         }
       }
     },
+  },
+  extraReducers: builder => {
+    builder
+      .addCase(fetchTasks.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchTasks.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(fetchTasks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 

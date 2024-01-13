@@ -1,7 +1,14 @@
-# tasks-manager-async-redux
+#tasks-manager-async-redux
 
-## Welcome to the tasks-manager-async-redux repository!
- This project is a task manager application:  it adds, deletes and filters tasks, displays active and completed status.
+✅Project Overview
+Task manager application with features to add, delete, and filter tasks.
+Displays the active and completed status of tasks.
 
- The app is built using React and Redux Toolkit. To perform CRUD operations I used createAsyncThunk API and the backend is simulated using mockapi.io, data fetching is performed using Axios. 
+✅Technology Stack
+Frontend: React, Redux Toolkit
+Backend: Simulated using mockapi.io
 
+✅Key Features
+CRUD operations implemented using createAsyncThunk API.
+Backend interaction using Axios for data fetching.
+Utilizes Redux Toolkit for global state management.

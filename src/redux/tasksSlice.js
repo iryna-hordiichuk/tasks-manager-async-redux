@@ -28,14 +28,14 @@ const tasksSlice = createSlice({
       .addCase(fetchTasks.rejected, handleRejected)
       .addCase(addTask.pending, handlePending)
       .addCase(addTask.fulfilled, (state, action) => {
-        state.pending = false;
+        state.isLoading = false;
         state.error = null;
         state.items.push(action.payload);
       })
       .addCase(addTask.rejected, handleRejected)
       .addCase(deleteTask.pending, handlePending)
       .addCase(deleteTask.fulfilled, (state, action) => {
-        state.pending = false;
+        state.isLoading = false;
         state.error = null;
         const index = state.items.findIndex(
           task => task.id === action.payload.id

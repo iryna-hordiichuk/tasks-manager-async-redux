@@ -16,7 +16,7 @@ export const Task = ({ task }) => {
         type="checkbox"
         className={css.checkbox}
         checked={task.completed} // true/false
-        onClick={handleToggle}
+        onChange={handleToggle}
       />
       <p className={css.text}>{task.text}</p>
       <button className={css.btn} onClick={handleDelete}>

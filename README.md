@@ -1,4 +1,4 @@
-#tasks-manager-async-redux
+# tasks-manager-async-redux
 
 ✅Project Overview
 Task manager application with features to add, delete, and filter tasks.

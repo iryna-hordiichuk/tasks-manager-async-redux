@@ -3,6 +3,8 @@
 // as we use createSlice hook and a separate file 
 // is created for every slice of the state 
 // Slice contains reducer functions withing itself;
+// Slice also generates actions.
+// So slice returns reducers and actions.
 // I left this code here to remind about the logic
 // which led to utilizing createSlice hook
 
